@@ -14,6 +14,7 @@ import { text } from "./action/Action";
 //
 function App() {
   const myState = useSelector((state) => state.ChangeTheNumber); //this changetheNumber reducer can called and used we get our state from here
+  console.log('myState', myState)
   const myText = useSelector((state) => state.displayText);
   const muldiv = useSelector((state) => state. MulDiviNumber)
   const dispatch = useDispatch(); // useDispatch is a hook method
