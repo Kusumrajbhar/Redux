@@ -35,6 +35,17 @@ export const multiply = (num) => {
     };
   };
 
+  export const dairyMilk = () => {
+    return {
+      type: "DAIRYMILK",
+    };
+  };
+
+  export const kitkat = () => {
+    return {
+      type: "KITKAT",
+    };
+  };
 //dispatch(IncrementFive(5) 
 // const IncrementFive = (num) => {  * num = 5 *
 // payload: num
