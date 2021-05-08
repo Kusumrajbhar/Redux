@@ -15,12 +15,12 @@ store.subscribe(() => {}); //as we have added logger middleware no need to conso
 //instead of consumer we have useSelector
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}>
       <App />
-    </Provider>
-    {/* <Provider store={storeNew}>
-      <AppNew />
     </Provider> */}
+    <Provider store={storeNew}>
+      <AppNew />
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

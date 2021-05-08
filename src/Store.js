@@ -2,15 +2,15 @@ import { createStore, applyMiddleware } from "redux";
 
 import rootReducer from "./reducer/RootReducer";
 
-//import { composewithDevTools } from 'redux-devtools-extension'
+import { composewithDevTools } from 'redux-devtools-extension'
 
 import logger from 'redux-logger'
 
 const store = createStore(
   rootReducer,                  //will contain combine reducer
-  //applyMiddleware(logger),
+  composewithDevTools( applyMiddleware(logger)),
  // composewithDevTools(applyMiddleware(logger))
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 //after adding this extenxion redux tool will show our all states
 

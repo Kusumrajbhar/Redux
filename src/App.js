@@ -13,6 +13,8 @@ import {
   kitkat 
 } from "./action/Action"; //we cannot call this function directly
 import Shop from "./Shop";
+import ShopChild from "./ShopChild";
+//useSelector gives state
 //functions can be called only with dispatch method
 //dispatch triggers Action
 //
@@ -27,7 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <Shop />
+      {/* <ShopChild  ChocolateType/>
+      <ShopChild /> */}
+      {/* <Shop /> */}
       {/* <button onClick={() => dispatch(incrementNumber())}>Increment</button>
       <input value={myState} />
       <button onClick={() => dispatch(DecrementNumber())}>Decrement</button>

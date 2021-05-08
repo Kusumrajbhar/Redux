@@ -7,9 +7,10 @@ import { composewithDevTools } from 'redux-devtools-extension'
 import rootReducer from './Reducer/RootReducer'
 
 const storeNew = createStore(
-    rootReducer,
+    rootReducer, 
+    //composewithDevTools(applyMiddleware(thunk))
     applyMiddleware(thunk),
-    //composewithDevTools(applyMiddleware(thunk)),
+    
     //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 

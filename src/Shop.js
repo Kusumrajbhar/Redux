@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { dairyMilk } from "./action/Action";
+import { dairyMilk, kitkat } from "./action/Action";
 import { connect } from "react-redux";
 
 function Shop(props) {
@@ -8,24 +8,26 @@ function Shop(props) {
     <div>
       <h1>SHOP ITEMS DETAILS</h1>
 
-      <h1>NumberOfDairymilk - {props.dairymilk}</h1>
-      <button onClick={props.dairyMilk}>Buycake</button>
+      <h1>NumberOfDairymilk - {props.dairymilkProp}</h1>
+      <button onClick={props.dairyMilkFunc}>Buycake</button>
       <br />
+      <h1>NumberOfKitkat - {props.kitkatProp}</h1>
+      <button onClick={props.kitkatFunc}>Buycake</button>
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    dairymilk:state.dairymilk
-    // numberOfIcecreams : state.numberOfIcecreams
+    dairymilkProp:state.ChocolateType.dairymilk,  //chocolateType is reducer storing 2 things i.e dairymilk and kitkat(storing state of dairymilk in [dairymilk property so that can access using props ])
+    kitkatProp:state.ChocolateType.kitkat
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    dairyMilk: () => dispatch(dairyMilk()),
-    //buyicecream : () => dispatch(buyicecream),
+    dairyMilkFunc: () => dispatch(dairyMilk()),  //dairyMilk() -- action
+    kitkatFunc: () => dispatch(kitkat())
   };
 };
 
